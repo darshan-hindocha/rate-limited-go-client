@@ -19,7 +19,7 @@ func mockApiResource(_ http.Request) (res http.Response, err error) {
 }
 
 func Test(t *testing.T) {
-	tps := 40
+	tps := 8000
 	outputFileName := handler(tps, mockApiResource)
 
 	inputFile, err := os.Open("./data/MOCK_DATA.csv")
@@ -39,7 +39,7 @@ func Test(t *testing.T) {
 	readOutput := csv.NewReader(outputFile)
 	outputData, err := readOutput.ReadAll()
 	if err != nil {
-		t.Fatal("error reading input data into memory")
+		t.Fatal("error reading output data into memory")
 	}
 
 	if len(outputData) != len(inputData) {

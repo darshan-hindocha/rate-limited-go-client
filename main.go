@@ -70,6 +70,7 @@ func handler(tps int, resource APIResource) (outputFileName string) {
 		log.Fatal("error creating output file")
 	}
 	w := csv.NewWriter(outputFile)
+	defer w.Flush()
 
 	tpsMeasure := TPSMeasure{
 		initialTimeStamp: time.Now(),
@@ -116,5 +117,7 @@ func handler(tps int, resource APIResource) (outputFileName string) {
 }
 
 func main() {
+	//tps:= 200
+	//_ = handler(tps, apiResource)
 	return
 }

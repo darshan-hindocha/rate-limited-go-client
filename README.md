@@ -1,5 +1,5 @@
 # rate-limited-go-client
-Simple implementation of a Go API that lets you limit the API calls on a resource
+Simple implementation of a Go API that lets you limit the number of API calls (tps=transactions per second) on a resource
 
 
 To try out, run the Test Function in `main_test.go`

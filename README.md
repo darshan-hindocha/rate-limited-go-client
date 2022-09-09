@@ -1,2 +1,2 @@
 # rate-limited-go-client
-Simple implementation of a Go API that let's you limit the API calls on a resource
+Simple implementation of a Go API that lets you limit the API calls on a resource
